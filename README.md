@@ -1,5 +1,13 @@
 # PHP Library for using csv file (｀・ω・´)
 
+## Installation
+
+#### You can use Composer or simply Download the Release.
+
+```sh
+    composer require ryoueno/csv
+```
+
 ## Usage
 
 #### [0] Get csv ready.
