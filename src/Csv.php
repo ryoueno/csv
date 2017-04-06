@@ -29,7 +29,7 @@ class Csv
     }
 
     /**
-     * $fields->enable, $disable_rows を確認し、有効なデータのみ収集して返す
+     * $fields->enabled, $disable_rows を確認し、有効なデータのみ収集して返す
      *
      * @return Array
      */
@@ -37,7 +37,7 @@ class Csv
     {
         $data = [];
         foreach ($this->fields->list() as $field_name) {
-            if ($this->fields->$field_name->enable === true) {
+            if ($this->fields->$field_name->enabled === true) {
                 // 有効なフィールドのみ
                 foreach ($this->src->get(true) as $idx => $row) {
                     if (!in_array($idx, $this->disable_rows)) {

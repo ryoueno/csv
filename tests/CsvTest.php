@@ -46,20 +46,20 @@ class CsvTest extends TestCase
     public function testSelect()
     {
         $this->target->select([]);
-        $this->assertFalse($this->target->fields->id->enable);
-        $this->assertFalse($this->target->fields->name->enable);
+        $this->assertFalse($this->target->fields->id->enabled);
+        $this->assertFalse($this->target->fields->name->enabled);
 
         $this->target->select(['id']);
-        $this->assertTrue($this->target->fields->id->enable);
-        $this->assertFalse($this->target->fields->name->enable);
+        $this->assertTrue($this->target->fields->id->enabled);
+        $this->assertFalse($this->target->fields->name->enabled);
 
         $this->target->select(['id', 'name']);
-        $this->assertTrue($this->target->fields->id->enable);
-        $this->assertTrue($this->target->fields->name->enable);
+        $this->assertTrue($this->target->fields->id->enabled);
+        $this->assertTrue($this->target->fields->name->enabled);
 
         $this->target->select(['id', 'name', 'test']);
-        $this->assertTrue($this->target->fields->id->enable);
-        $this->assertTrue($this->target->fields->name->enable);
+        $this->assertTrue($this->target->fields->id->enabled);
+        $this->assertTrue($this->target->fields->name->enabled);
     }
 
     public function testWhere()
@@ -126,7 +126,7 @@ class CsvTest extends TestCase
         );
 
         $disable_rows->setValue($this->target, [0,1]);
-        $this->target->fields->id->enable = false;
+        $this->target->fields->id->enabled = false;
 
         $this->assertEquals(
             [
@@ -138,8 +138,8 @@ class CsvTest extends TestCase
         );
 
         $disable_rows->setValue($this->target, []);
-        $this->target->fields->id->enable = false;
-        $this->target->fields->name->enable = false;
+        $this->target->fields->id->enabled = false;
+        $this->target->fields->name->enabled = false;
 
         $this->assertEquals(
             [],

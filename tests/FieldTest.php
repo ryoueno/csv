@@ -17,34 +17,34 @@ class FieldTest extends TestCase
 
     public function testProperty()
     {
-        $this->assertTrue($this->target->enable);
+        $this->assertTrue($this->target->enabled);
         $this->assertEquals(99, $this->target->idx);
         $this->assertEquals("test", $this->target->name);
     }
 
     public function testDisable()
     {
-        // [Field::enable] true -> false
-        $this->target->enable = true;
+        // [Field::enabled] true -> false
+        $this->target->enabled = true;
         $this->target->disable();
-        $this->assertFalse($this->target->enable);
+        $this->assertFalse($this->target->enabled);
 
-        // [Field::enable] false -> false
-        $this->target->enable = false;
+        // [Field::enabled] false -> false
+        $this->target->enabled = false;
         $this->target->disable();
-        $this->assertFalse($this->target->enable);
+        $this->assertFalse($this->target->enabled);
     }
 
     public function testEnable()
     {
-        // [Field::enable] true -> true
-        $this->target->enable = true;
+        // [Field::enabled] true -> true
+        $this->target->enabled = true;
         $this->target->enable();
-        $this->assertTrue($this->target->enable);
+        $this->assertTrue($this->target->enabled);
 
-        // [Field::enable] false -> true
-        $this->target->enable = false;
+        // [Field::enabled] false -> true
+        $this->target->enabled = false;
         $this->target->enable();
-        $this->assertTrue($this->target->enable);
+        $this->assertTrue($this->target->enabled);
     }
 }

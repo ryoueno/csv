@@ -8,7 +8,7 @@ namespace Gojiro;
 class Field
 {
     /** @var 有効なフィールドかどうか */
-    public $enable = true;
+    public $enabled = true;
 
     /** @var フィールドの番号、csvは順番が大切 */
     public $idx;
@@ -30,7 +30,7 @@ class Field
      */
     public function disable()
     {
-        $this->enable = false;
+        $this->enabled = false;
     }
 
     /**
@@ -38,6 +38,6 @@ class Field
      */
     public function enable()
     {
-        $this->enable = true;
+        $this->enabled = true;
     }
 }
