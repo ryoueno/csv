@@ -9,8 +9,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Gojiro\\": "src/"
+            "Gojiro\\": "src/",
+            "Gojiro\\Test\\": "tests/"
         }
     },
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    }
 }
