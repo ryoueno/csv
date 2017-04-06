@@ -1,0 +1,16 @@
+{
+    "name": "ryoueno/csv",
+    "type": "library",
+    "authors": [
+        {
+            "name": "ryoueno",
+            "email": "r.r.ag0611@outlook.jp"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Gojiro\\": "src/"
+        }
+    },
+    "require": {}
+}
