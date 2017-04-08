@@ -47,6 +47,7 @@ class Csv
                 }
             }
         }
+        $this->disable_rows = [];
         return $data;
     }
 
